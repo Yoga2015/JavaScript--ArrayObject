@@ -51,6 +51,7 @@ let arr = [22, 55, 5, 88, 66, 77, 111, 3];
 
 */
 
+// 数组中的数组元素数量 是 双数 时：
 let arr = [22, 55, 5, 88, 66, 77, 111, 3];
 //循环次数为数组的一半
 for (let i = 0; i < arr.length / 2; i++) {//0 1 2 3 
@@ -61,6 +62,18 @@ for (let i = 0; i < arr.length / 2; i++) {//0 1 2 3
 console.log(arr);
 
 
+// 数组中的数组元素数量 是 单数 时：
+let arr2 = [22, 55, 5, 88, 66, 77, 111];
+//循环次数为数组的一半
+for (let i = 0; i < arr2.length / 2; i++) {//0 1 2 3 
+    let temp = arr2[i];
+    arr2[i] = arr2[arr2.length - 1 - i];
+    arr2[arr2.length - 1 - i] = temp;
+}
+console.log(arr2);
+
+
+// 数组中的存储的是 字符串 时，数组中的数组元素 数量 是 单 或者 双 时：
 let a = ['peng', 'chen', 'luo', 'li', 'lao', 'liang', 'wu'];
 //循环次数为数组的一半
 for (let i = 0; i < a.length / 2; i++) {//0 1 2 3 
